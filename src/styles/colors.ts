@@ -1,0 +1,18 @@
+export default {
+  primary: '#000000',
+  white: '#ffffff',
+  veryLightGreen: '#dcfadf',
+  green: '#68c471',
+  lightGreen: '#bcf5ab',
+  darkGreen: '#134718',
+  blue: '#2146ff',
+  black: '#000000',
+  lightGray: '#dddddd',
+  gray: '#999999',
+  mediumGray: '#666666',
+  darkRed: '#B0171F',
+  darkGray: '#444444',
+  superDarkGray: '#212121',
+  transparent: 'rgba(255, 255, 255, 0)',
+  transparentBlack: 'rgba(0, 0, 0, 0.774)',
+};
