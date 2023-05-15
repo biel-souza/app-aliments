@@ -38,7 +38,13 @@ const SignIn = ({ navigation }: HomeScreenProps) => {
                 <Text style={styles.title}>LOGIN</Text>
               </View>
               <View style={styles.boxInput}>
-                <Input label="Email" placeholder="Email" onChangeText={handleChange('email')} value={values.email} />
+                <Input
+                  label="Email"
+                  placeholder="Email"
+                  onChangeText={handleChange('email')}
+                  value={values.email}
+                  autoCapitalize="none"
+                />
               </View>
               <View style={styles.boxInput}>
                 <PasswordInput
@@ -46,6 +52,7 @@ const SignIn = ({ navigation }: HomeScreenProps) => {
                   placeholder="Senha"
                   onChangeText={handleChange('password')}
                   value={values.password}
+                  autoCapitalize="none"
                 />
               </View>
               <View style={styles.boxButton}>

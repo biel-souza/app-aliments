@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
 import ForgotPasswordCode from '../pages/ForgotPasswordCode';
@@ -20,6 +21,7 @@ const AuthStack = createNativeStackNavigator();
 
 const AuthRoutes = () => (
   <NavigationContainer>
+    <StatusBar style="auto" backgroundColor="black" />
     <AuthStack.Navigator>
       <AuthStack.Screen name="SignIn" component={SignIn} options={{ title: '', headerShown: false }} />
       <AuthStack.Screen name="Register" component={Register} options={{ title: '', headerShown: false }} />

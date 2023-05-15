@@ -63,6 +63,7 @@ const ForgotPassword = ({ navigation, route }: HomeScreenProps) => {
                   placeholder="Senha"
                   onChangeText={handleChange('password')}
                   value={values.password}
+                  autoCapitalize="none"
                 />
               </View>
               <View style={styles.boxButton}>

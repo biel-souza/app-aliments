@@ -2,7 +2,9 @@ import { useState, useEffect, useCallback, useContext } from 'react';
 import ProgressCircle from 'react-native-progress-circle';
 import { View, Text, TouchableOpacity } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
+import Popover from 'react-native-popover-view';
 import { Toast } from 'toastify-react-native';
 import { format, parseISO } from 'date-fns';
 import { pt } from 'date-fns/locale';
@@ -90,6 +92,19 @@ const Purchases = () => {
             </View>
             <View style={styles.wrapper}>
               <NumberFormat value={purchase.value} />
+            </View>
+            <View style={styles.wrapper}>
+              <Popover
+                from={(sourceRef, showPopover) => (
+                  <TouchableOpacity onPress={showPopover}>
+                    <Feather name="alert-circle" color={colors.darkGreen} size={18} />
+                  </TouchableOpacity>
+                )}
+              >
+                <Text style={{ padding: 10, width: '100%' }}>
+                  {purchase.observation ? purchase.observation : 'Sem observações'}
+                </Text>
+              </Popover>
             </View>
           </View>
         ))}

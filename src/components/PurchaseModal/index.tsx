@@ -54,7 +54,8 @@ export const PurchaseModal = ({ open, setOpen, limit, actualValue }: PropsType) 
         });
 
         if (verify) {
-          const data = { user_id: user?.user_id, value: Number(value), observation: observation };
+          const data = { user_id: user?.user_id, value: Number(value), observation };
+
           await api.post('/purchases', data);
 
           setOpen(false);
@@ -97,8 +98,8 @@ export const PurchaseModal = ({ open, setOpen, limit, actualValue }: PropsType) 
                   placeholder="Observação"
                   maxLength={25}
                   value={observation}
-                  onChange={(e: any) => {
-                    setObservation(e.target.value);
+                  onChangeText={(e: any) => {
+                    setObservation(e);
                   }}
                 />
               </View>
@@ -109,7 +110,7 @@ export const PurchaseModal = ({ open, setOpen, limit, actualValue }: PropsType) 
           ) : (
             <View style={styles.wrapper}>
               <Text style={styles.title}>
-                Compra de <NumberFormat value={value} />
+                VALOR - <NumberFormat value={value} />
               </Text>
               <PasswordInput label="Senha" placeholder="Senha" onChangeText={(e) => setPassword(e)} value={password} />
               <View style={styles.boxButton}>

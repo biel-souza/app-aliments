@@ -47,7 +47,13 @@ const ForgotPasswordMail = ({ navigation }: HomeScreenProps) => {
             <View style={styles.form}>
               <Text style={styles.title}>Insira o email do seu cadastro:</Text>
               <View style={styles.boxInput}>
-                <Input label="Email" placeholder="Email" onChangeText={handleChange('email')} value={values.email} />
+                <Input
+                  label="Email"
+                  placeholder="Email"
+                  onChangeText={handleChange('email')}
+                  value={values.email}
+                  autoCapitalize="none"
+                />
               </View>
               <View style={styles.boxButton}>
                 <ActionButton onPress={() => handleSubmit()} title="ENVIAR" />

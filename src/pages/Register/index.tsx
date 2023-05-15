@@ -107,6 +107,7 @@ const Register = ({ navigation }: ScreenProps) => {
                   onChangeText={handleChange('email')}
                   value={values.email}
                   error={errors.email}
+                  autoCapitalize="none"
                 />
               </View>
               <View style={styles.boxInput}>
@@ -116,6 +117,7 @@ const Register = ({ navigation }: ScreenProps) => {
                   onChangeText={handleChange('password')}
                   value={values.password}
                   error={errors.password}
+                  autoCapitalize="none"
                 />
               </View>
               <View style={styles.boxButton}>

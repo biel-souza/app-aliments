@@ -8,7 +8,7 @@ interface PropsType extends TextInputProps {
 }
 
 const PasswordInput = ({ label, error, ...rest }: PropsType) => {
-  return <Input label={label} error={error} secureTextEntry={true} {...rest} />;
+  return <Input label={label} error={error} secureTextEntry={true} autoCapitalize="none" {...rest} />;
 };
 
 export default PasswordInput;
